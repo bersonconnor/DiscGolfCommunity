@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Disc Golf Community</string>
+    <string name="hole">Hole</string>
+    <string name="par">Par</string>
+    <string name="distance">Distance</string>
+    <string name="score">Score</string>
+</resources>
