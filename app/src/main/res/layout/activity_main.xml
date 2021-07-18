@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scoreCardLayout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:id="@+id/last_row"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TableRow>
-        <!-- Headers for Score card -->
-        <TextView
-            android:layout_column="1"
-            android:padding="3dip"
-            android:text="@string/hole" />
-
-        <TextView
-            android:layout_column="2"
-            android:text="@string/par"
-            android:padding="3dip" />
-
-        <TextView
-            android:layout_column="3"
-            android:text="@string/distance"
-            android:padding="3dip" />
-
-        <TextView
-            android:layout_column="4"
-            android:text="@string/score"
-            android:padding="3dip" />
-    </TableRow>
+    <include layout="@layout/first_row" />
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:fadingEdge="none"
-        android:fillViewport="true">
-
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
 
         <TableLayout
             android:id="@+id/scoreCardTable"
@@ -42,21 +19,5 @@
             android:isScrollContainer="true" />
     </ScrollView>
 
-    <TableRow>
-
-        <TextView
-            android:id="@+id/par_total"
-            android:layout_column="2"
-            android:padding="3dip" />
-
-        <TextView
-            android:id="@+id/distance_total"
-            android:layout_column="3"
-            android:padding="3dip" />
-
-        <TextView
-            android:id="@+id/score_total"
-            android:layout_column="4"
-            android:padding="3dip" />
-    </TableRow>
+    <include layout="@layout/last_row" />
 </TableLayout>
