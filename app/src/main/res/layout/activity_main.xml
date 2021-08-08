@@ -1,45 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_gravity="center"
     android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+
+    </TextView>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:orientation="vertical">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Score Cards"
-            android:id="@+id/score_card_button"
-            android:layout_gravity="center_horizontal" />
+        android:orientation="vertical"
+        android:stretchColumns="0"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="4">
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Course Finder"
-            android:id="@+id/course_finder_button"
-            android:layout_gravity="center_horizontal" />
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:text="Score Cards"
+                android:id="@+id/score_card_button"
+                android:minHeight="200px" />
+        </TableRow>
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Statistics"
-            android:id="@+id/stat_button"
-            android:layout_gravity="center_horizontal" />
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Help"
-            android:id="@+id/help_button"
-            android:layout_gravity="center_horizontal" />
+            <Button
+                android:text="Course Finder"
+                android:id="@+id/course_finder_button"
+                android:minHeight="200px" />
+        </TableRow>
 
-    </LinearLayout>
-</RelativeLayout>
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:text="Statistics"
+                android:id="@+id/stat_button"
+                android:minHeight="200px" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:text="Help"
+                android:id="@+id/help_button"
+                android:minHeight="200px" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
